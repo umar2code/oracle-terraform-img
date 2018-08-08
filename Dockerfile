@@ -12,7 +12,7 @@ RUN apk add --update git curl openssh && \
     rm -f terraform_${TERRAFORM_VERSION}_linux_amd64.zip
 
 RUN apk add bash openssl && \
-      wget https://github.com/oracle/terraform-provider-baremetal/releases/download/v${ORACLE_BARE_METAL_CLOUD}/linux.tar.gz && \
+      wget https://github.com/oracle/terraform-provider-baremetal/releases/download/v${ORACLE_BARE_METAL_CLOUD}/linux_amd64.tar.gz && \
       mkdir /usr/local/oracle && \
       tar -C /usr/local/oracle -xzf linux.tar.gz && \
       mkdir -p ~/.terraform.d/plugins/ && \
