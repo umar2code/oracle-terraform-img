@@ -1,7 +1,7 @@
 FROM alpine:latest
 
 ENV TERRAFORM_VERSION=0.11.7
-ENV TERRAFORM_SHA256SUM=acec7133ffa00da385ca97ab015b281c6e90e99a41076ede7025a4c78425e09f
+ENV TERRAFORM_SHA256SUM=6b8ce67647a59b2a3f70199c304abca0ddec0e49fd060944c26f666298e23418
 ENV ORACLE_BARE_METAL_CLOUD=2.1.17
 
 RUN apk add --update git curl openssh && \
@@ -22,4 +22,6 @@ RUN apk add bash openssl && \
 COPY install.sh /home/install.sh
 
 WORKDIR /home
+
+
 
